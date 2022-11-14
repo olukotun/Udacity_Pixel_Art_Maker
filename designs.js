@@ -5,19 +5,19 @@ let color = document.getElementById("colorPicker").value;
 let height = document.getElementById("inputWidth").value;
 let width = document.getElementById("inputWidth").value;
 
-//HANDLE HEIGHT CHANGE
+//ADD EVENT LISTENER FOR HEIGHT CHANGE
 const heightInput = document.querySelector("#inputHeight");
 heightInput.addEventListener("change", function (e) {
   height = e.target.value;
 });
 
-//HANDLE WIDTH CHANGE
+//HANDLE EVENT LISTENER FOR WIDTH CHANGE
 const widthInput = document.querySelector("#inputWidth");
 widthInput.addEventListener("change", function (e) {
   width = e.target.value;
 });
 
-//HANDLE COLOR PICKER CHANGE
+//HANDLE EVENT LISTENER FOR COLOR PICKER CHANGE
 const colorPicked = document.querySelector("#colorPicker");
 colorPicked.addEventListener("change", function (e) {
   color = e.target.value;
@@ -33,7 +33,6 @@ function setTableProperties() {
   table.appendChild(tableBody);
 
   //LOOP TO CREATE THE ROW AND CELL
-
   for (var row = 0; row < height; row++) {
     //CREATE THE ROWS
     var tableRow = document.createElement("TR");
@@ -50,6 +49,7 @@ function setTableProperties() {
   }
 }
 
+//ADD EVENT LISTENER TO SELECT COLOR
 function addEventListenerToTableDataAndSetColor() {
   document.querySelectorAll("td").forEach((tableData) => {
     tableData.addEventListener("click", function () {
