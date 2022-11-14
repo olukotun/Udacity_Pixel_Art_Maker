@@ -25,7 +25,7 @@ colorPicked.addEventListener("change", function (e) {
 
 function setTableProperties() {
   //GET THE TABLE BY ID
-  var table = document.querySelector("#pixelCanvas");
+  let table = document.querySelector("#pixelCanvas");
   //CREATE A TABLE BODY
   tableBody = document.createElement("TBODY");
 
@@ -33,16 +33,16 @@ function setTableProperties() {
   table.appendChild(tableBody);
 
   //LOOP TO CREATE THE ROW AND CELL
-  for (var row = 0; row < height; row++) {
+  for (let row = 0; row < height; row++) {
     //CREATE THE ROWS
-    var tableRow = document.createElement("TR");
+    let tableRow = document.createElement("TR");
 
     //APPEND THE ROW TO THE BODY
     tableBody.appendChild(tableRow);
 
     //FOR EACH OF THE ROW CREATE A CELL
-    for (var column = 0; column < width; column++) {
-      var tableData = document.createElement("TD");
+    for (let column = 0; column < width; column++) {
+      let tableData = document.createElement("TD");
       //APPEND EACH DATA TO ROW
       tableRow.appendChild(tableData);
     }
@@ -60,7 +60,7 @@ function addEventListenerToTableDataAndSetColor() {
 
 function makeGrid(e) {
   // Your code goes here!
-  var tableBody = document.getElementsByTagName("TBODY");
+  let tableBody = document.getElementsByTagName("TBODY");
   //CHECK IF THE TABLE ALREADY HAS A BODY
   if (tableBody.length === 0) {
     setTableProperties();
